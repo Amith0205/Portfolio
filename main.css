@@ -18,13 +18,46 @@ body {
     padding-top: 1.2rem;
 }
 
+@keyframes fadeInUp {
+	 from {
+		 transform: translate3d(0, 40px, 0);
+	}
+	 to {
+		 transform: translate3d(0, 0, 0);
+		 opacity: 1;
+	}
+}
+ @-webkit-keyframes fadeInUp {
+	 from {
+		 transform: translate3d(0, 40px, 0);
+	}
+	 to {
+		 transform: translate3d(0, 0, 0);
+		 opacity: 1;
+	}
+}
+ .animated {
+	 animation-duration: 1s;
+	 animation-fill-mode: both;
+	 -webkit-animation-duration: 1s;
+	 -webkit-animation-fill-mode: both;
+}
+ .animatedFadeInUp {
+	 opacity: 0;
+}
+ .fadeInUp {
+	 opacity: 0;
+	 animation-name: fadeInUp;
+	 -webkit-animation-name: fadeInUp;
+}
+
 .animate-character
 {
    text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
     #231557 0%,
-    #44107a 29%,
+    #fff 29%,
     #ff1361 67%,
     #fff800 100%
   );
